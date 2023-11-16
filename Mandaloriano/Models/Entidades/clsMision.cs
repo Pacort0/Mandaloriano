@@ -5,38 +5,38 @@
         #region atributos
         private int idMision;
         private string objetivoMision;
-        private string planetaMision;
-        private string recompensaMision;
+        private string nombreMision;
+        private int recompensaMision;
         #endregion
 
         #region constructores
         public clsMision() { }
-        public clsMision(int idMision, string objetivoMision, string planetaMision, string recompensaMision)
+        public clsMision(int idMision, string nombreMision, string objetivoMision, int recompensaMision)
         {
             this.idMision = idMision;
+            this.nombreMision= nombreMision;
             this.objetivoMision = objetivoMision;
-            this.planetaMision = planetaMision;
             this.recompensaMision = recompensaMision;
         }
         #endregion
-
+                
         #region propiedades
         public int IdMision
         {
             get { return idMision; }
             set { idMision = value; }
         }
+        public string NombreMision
+        {
+            get { return nombreMision;}
+            set { nombreMision = value;}
+        }
         public string ObjetivoMision
         {
             get { return objetivoMision; }
             set { objetivoMision = value; }
         }
-        public string PlanetaMision
-        {
-            get { return planetaMision; }
-            set { planetaMision = value; }
-        }
-        public string RecompensaMision
+        public int RecompensaMision
         {
             get { return recompensaMision; }
             set { recompensaMision = value;}
