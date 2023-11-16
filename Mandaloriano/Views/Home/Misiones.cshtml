@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Mandaloriano.ViewModels.clsMisionesVM
+
+<div class="text-center">
+    @using (Html.BeginForm(FormMethod.Get)){
+        <fieldset>
+            Misiones
+            @Html.DropDownListFor()
+        </fieldset>
+    }
+</div>

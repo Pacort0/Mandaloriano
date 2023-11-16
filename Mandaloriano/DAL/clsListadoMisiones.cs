@@ -4,16 +4,27 @@ namespace Mandaloriano.DAL
 {
     public static class clsListadoMisiones
     {
-        public static List<clsMision> listaMisiones()
+        public static List<clsMision> listaMisionesLarga()
         {
-            List<clsMision> lista = new List<clsMision>()
+            List<clsMision> listaLarga = new List<clsMision>()
             {
                 new clsMision() {IdMision = 1, NombreMision="Rescate de Baby Yoda", ObjetivoMision="Debes hacerte con Grogu y llevárselo a Luke SkyWalker para su entrenamiento.", RecompensaMision=5000},
                 new clsMision() {IdMision = 2, NombreMision="Recuperar armadura Beskar", ObjetivoMision="Tu armadura de Beskar ha sido robada. Debes encontrarla.", RecompensaMision=2000},
                 new clsMision() {IdMision = 3, NombreMision="Planeta Sorgon", ObjetivoMision="Debes llevar a un niño de vuelta a su planeta natal “Sorgon”.", RecompensaMision=500},
                 new clsMision() {IdMision = 4, NombreMision="Renacuajos", ObjetivoMision="Debes llevar a una Dama Rana y sus huevos de Tatooine a la luna del estuario Trask, donde su esposo fertilizará los huevos.", RecompensaMision=500}
             };
-            return lista;
+            return listaLarga;
+        }
+        public static List<clsMision> listaMisionesCorta()
+        {
+            List<clsMision> listaCorta = new List<clsMision>()
+            {
+                 new clsMision() {IdMision = 1, NombreMision="Rescate de Baby Yoda"},
+                new clsMision() {IdMision = 2, NombreMision="Recuperar armadura Beskar"},
+                new clsMision() {IdMision = 3, NombreMision="Planeta Sorgon"},
+                new clsMision() {IdMision = 4, NombreMision="Renacuajos" }
+            };
+            return listaCorta;
         }
     }
 }
