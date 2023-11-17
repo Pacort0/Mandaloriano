@@ -3,13 +3,16 @@ using Mandaloriano.Models.Entidades;
 
 namespace Mandaloriano.ViewModels
 {
-    public class clsMisionesVM
+    public class clsMisionesVM:clsMision
     {
         private List<clsMision> listaCorta;
         private List<clsMision> listaLarga;
 
         public clsMisionesVM()
         {
+            NombreMision = "";
+            ObjetivoMision = "";
+            RecompensaMision = 0;
             listaCorta = clsListadoMisiones.listaMisionesCorta();
             listaLarga = clsListadoMisiones.listaMisionesLarga();
         }

@@ -4,10 +4,11 @@
 @model Mandaloriano.ViewModels.clsMisionesVM
 
 <div class="text-center">
-    @using (Html.BeginForm(FormMethod.Get)){
+    @using (Html.BeginForm(FormMethod.Post)){
         <fieldset>
             Misiones
-            @Html.DropDownListFor()
+            @Html.DropDownListFor(modelo=>modelo.ListaCorta, new SelectList(Model.ListaCorta, "IdMision", "NombreMision"))
+            <button type="submit">Ver detalles</button>
         </fieldset>
     }
 </div>
