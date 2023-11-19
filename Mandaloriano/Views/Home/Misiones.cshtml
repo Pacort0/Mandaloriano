@@ -4,10 +4,28 @@
 @model Mandaloriano.ViewModels.clsMisionesVM
 
 <div class="text-center">
-    @using (Html.BeginForm(FormMethod.Get)){
+    @using (Html.BeginForm(FormMethod.Post)){
         <fieldset>
+            @{
+                var mision = Model.IdMision;
+            }
             Misiones
-            @Html.DropDownListFor()
+            @Html.DropDownListFor(mision => mision.IdMision, new SelectList(Model.ListaMisiones, "IdMision", "NombreMision"))
+            <button type="submit">Ver detalles</button>
         </fieldset>
     }
+    <br />
+    <br />
+    <br />
+    @{
+        if (ViewBag.InfoMision)
+        {
+            <div>
+                <p>Nombre de la misión: @Model.NombreMision</p>
+                <p>Objetivo de la misión: @Model.ObjetivoMision</p>
+                <p>Recompensa de la misión: @Model.RecompensaMision</p>
+            </div>
+        }
+    }
+
 </div>

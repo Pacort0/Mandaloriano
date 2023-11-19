@@ -3,27 +3,18 @@ using Mandaloriano.Models.Entidades;
 
 namespace Mandaloriano.ViewModels
 {
-    public class clsMisionesVM
+    public class clsMisionesVM:clsMision
     {
-        private List<clsMision> listaCorta;
-        private List<clsMision> listaLarga;
+        private List<clsMision> listaMisiones;
 
         public clsMisionesVM()
         {
-            listaCorta = clsListadoMisiones.listaMisionesCorta();
-            listaLarga = clsListadoMisiones.listaMisionesLarga();
+            listaMisiones = clsListadoMisiones.listaMisionesLarga();
         }
-
-        public List<clsMision> ListaCorta
+        public List<clsMision> ListaMisiones
         {
-            get { return listaCorta; }
-            set { listaCorta = value; }
-        }
-
-        public List<clsMision> ListaLarga
-        {
-            get { return listaLarga; }
-            set { listaLarga = value; }
+            get { return listaMisiones; }
+            set { listaMisiones = value; }
         }
     }
 
