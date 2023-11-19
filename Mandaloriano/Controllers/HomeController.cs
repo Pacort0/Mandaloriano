@@ -1,6 +1,5 @@
 ﻿using Mandaloriano.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Mandaloriano.Controllers
 {
